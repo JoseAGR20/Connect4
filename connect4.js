@@ -30,7 +30,7 @@ function makeHtmlBoard() {
     headCell.setAttribute("id", x);
     top.append(headCell);
   }
-  htmlBoard.append(top);
+  board.append(top);
 
   // These lines create the main body of the board grid. 
   for (let y = 0; y < HEIGHT; y++) {
@@ -40,7 +40,7 @@ function makeHtmlBoard() {
       cell.setAttribute("id", `${y}-${x}`);
       row.append(cell);
     }
-    htmlBoard.append(row);
+    board.append(row);
   }
 }
 
@@ -56,7 +56,7 @@ return null;
 
 /** placeInTable: update DOM to place piece into HTML table of board */
 
-function placeInTable(y, x) {(y, x) {
+function placeInTable(y, x) {(y, x)
   const piece = document.createElement('div');
   piece.classList.add('piece');
   piece.classList.add(`p${currPlayer}`);
@@ -66,7 +66,6 @@ function placeInTable(y, x) {(y, x) {
   spot.append(piece);
 }
   // TODO: make a div and insert into correct table cell
-}
 
 /** endGame: announce game end */
 
