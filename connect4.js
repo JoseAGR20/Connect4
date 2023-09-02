@@ -21,7 +21,7 @@ function makeHtmlBoard() {
   //top.addEventListener("click", handleClick);
 
   for (let x = 0; x < WIDTH; x++) {
-    const headCell = document.createElement("td");
+    let headCell = document.createElement("td");
     headCell.setAttribute("id", x);
     top.append(headCell);
     headCell.addEventListener("click", handleClick); // Set up the event listener here
@@ -33,7 +33,7 @@ function makeHtmlBoard() {
   for (let y = 0; y < HEIGHT; y++) {
     const row = document.createElement("tr");
     for (let x = 0; x < WIDTH; x++) {
-      const cell = document.createElement("td");
+      let cell = document.createElement("td");
       cell.setAttribute("id", `${y}-${x}`);
       row.append(cell);
     }
@@ -118,8 +118,8 @@ function checkForWin() {
 
   // TODO: read and understand this code. Add comments to help you.
 
-  for (const y = 0; y < HEIGHT; y++) {
-    for (const x = 0; x < WIDTH; x++) {
+  for (let y = 0; y < HEIGHT; y++) {
+    for (let x = 0; x < WIDTH; x++) {
       //This denotes the 4 different ways to win
       const horiz = [[y, x], [y, x + 1], [y, x + 2], [y, x + 3]];
       const vert = [[y, x], [y + 1, x], [y + 2, x], [y + 3, x]];
