@@ -13,13 +13,14 @@
   border-radius: 50%;
 }
 
+.piece.p1 {
+  background-color: red;
+}
 .piece.p2 {
   background-color: blue;
 }
 
-.piece.p1 {
-  background-color: red;
-}
+
 
 #column-top td {
   border: dashed 1px lightgray;
